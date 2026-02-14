@@ -5,7 +5,7 @@ using namespace std;
 
 const int SIZE = 5;
 
-string* reverseArray(string *arr);
+void reverseArray(string *arr);
 // void displayArray(string *arr);
 
 int main() {
@@ -20,8 +20,17 @@ int main() {
     return 0;
 }
 
-string* reverseArray(string *arr){
+void reverseArray(string *arr){
+    string temp;
+    int f = 0, l = SIZE - 1;
     
+    while (f < l){
+        temp = *(arr + f);
+        *(arr + f) = *(arr + l);
+        *(arr + l) = temp;
+        f++;
+        l--;
+    }
 
 }
 
